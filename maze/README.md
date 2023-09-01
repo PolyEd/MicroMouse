@@ -1,2 +1,2 @@
 Ethan's maze generating code!
-It makes a .bmp file with a colored maze
+It makes a .bmp file with a colored maze. That's it, really.

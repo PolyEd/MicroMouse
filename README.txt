@@ -8,7 +8,7 @@ https://www.youtube.com/watch?v=ZMQbHMgK2rw
 
 The conference we will attend:
 https://apec-conf.org/
-
+ 
 The conference rules:
 https://s3.us-east-1.amazonaws.com/apec-conf-images/APEC_Policies_And_Procedures_Rev_7-3_2022-09-02.pdf
 See page 15 "Minimum Age Policy" which implies there is no minimum age for the MicroMouse contest.

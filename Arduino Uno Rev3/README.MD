@@ -1,3 +1,3 @@
-Info about the Ardunio Uno Rev3
+# Info about the Ardunio Uno Rev3
 
-# Official start of the project! (9/14/23)
+\# Official start of the project! (9/14/23)

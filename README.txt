@@ -13,5 +13,5 @@ The conference rules:
 https://s3.us-east-1.amazonaws.com/apec-conf-images/APEC_Policies_And_Procedures_Rev_7-3_2022-09-02.pdf
 See page 15 "Minimum Age Policy" which implies there is no minimum age for the MicroMouse contest.
 
-An old set of Micromouse rules (revision 2009):
+An old set of MicroMouse rules (revision 2009):
 http://micromouseusa.com/wp-content/uploads/2013/10/APEC-Rules.pdf

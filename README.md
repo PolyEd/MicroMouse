@@ -16,5 +16,5 @@ See page 15 "Minimum Age Policy" which implies there is no minimum age for the M
 An old set of MicroMouse rules (revision 2009):<br />
 http://micromouseusa.com/wp-content/uploads/2013/10/APEC-Rules.pdf<br />
 <br />
-~~Nim:<br />
-https://nim-lang.org~~<br />
+Nim:<br />
+https://nim-lang.org<br />

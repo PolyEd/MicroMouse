@@ -12,6 +12,10 @@ Rules:
   See page 15 "Minimum Age Policy" which implies there is no minimum age for the MicroMouse contest.
 - [An old set of MicroMouse rules (revision 2009)](http://micromouseusa.com/wp-content/uploads/2013/10/APEC-Rules.pdf)
 
+**Important** files to read before working with the Arduino code or using it:
+- [I2C README](I2C_README.md)
+- [Info about the plotting library used in this project](PLOTTER_README.md)
+
 <!--
 ---
 Also [Nim](https://nim-lang.org/) 😃

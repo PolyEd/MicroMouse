@@ -13,8 +13,8 @@ Rules:
 - [An old set of MicroMouse rules (revision 2009)](http://micromouseusa.com/wp-content/uploads/2013/10/APEC-Rules.pdf)
 
 **Important** files to read before working with the Arduino code or using it:
-- [I2C README](I2C_README.md)
-- [Info about the plotting library used in this project](PLOTTER_README.md)
+- [I2C README](I2C-README.md)
+- [Info about the plotting library used in this project](PLOTTER-README.md)
 
 <!--
 ---

@@ -8,3 +8,5 @@ A1      | Yout
 A2      | Zout
 GND     | GND
 VCC/5V  | VCC
+
+The code in ADXL335_plotter is a testing program using the [plotting library](../PLOTTER-README.md).

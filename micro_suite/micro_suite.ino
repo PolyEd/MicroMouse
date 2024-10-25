@@ -17,7 +17,9 @@
 #define sensor3_newaddress 44
 #define sensor4_newaddress 45
 
-#define NUM_READINGS 10 // Number of readings to average
+#define NUM_READINGS 2 // Number of readings to average
+
+int working[5] = {1, 1, 1, 1, 1};
 
 
 VL53L0X vl53l0x;
@@ -26,7 +28,7 @@ int index = 0;               // Index to keep track of the current reading posit
 float runningAvg;
 
 VL53L0X vl53l0x_2;
-int readings_2[NUM_READINGS];  // Array to store the readings
+int readings_2[NUM_READINGS];  // Arrato store the readings
 int index_2 = 0;               // Index to keep track of the current reading position
 float runningAvg_2;
 
@@ -71,32 +73,37 @@ void setup() {
 
   vl53l0x.setTimeout(500);
   if (!vl53l0x.init()) {
-    Serial.begin(9600);
-    while (1) Serial.println("Failed to detect and initialize sensor!");
+    // Serial.begin(9600);
+    // while (1) Serial.println("Failed to detect and initialize sensor!");
+    working[0] = 0;
   }
 
   vl53l0x_2.setTimeout(500);
   if (!vl53l0x_2.init()) {
-    Serial.begin(9600);
-    while (1) Serial.println("Failed to detect and initialize sensor 2!");
+    // Serial.begin(9600);
+    // while (1) Serial.println("Failed to detect and initialize sensor 2!");
+    working[1] = 0;
   }
 
   vl53l0x_3.setTimeout(500);
   if (!vl53l0x_3.init()) {
-    Serial.begin(9600);
-    while (1) Serial.println("Failed to detect and initialize sensor 3!");
+    // Serial.begin(9600);
+    // while (1) Serial.println("Failed to detect and initialize sensor 3!");
+    working[2] = 0;
   }
 
   vl53l0x_4.setTimeout(500);
   if (!vl53l0x_4.init()) {
-    Serial.begin(9600);
-    while (1) Serial.println("Failed to detect and initialize sensor 4!");
+    // Serial.begin(9600);
+    // while (1) Serial.println("Failed to detect and initialize sensor 4!");
+    working[3] = 0;
   }
 
   vl53l0x_5.setTimeout(500);
   if (!vl53l0x_5.init()) {
-    Serial.begin(9600);
-    while (1) Serial.println("Failed to detect and initialize sensor 5!");
+    // Serial.begin(9600);
+    // while (1) Serial.println("Failed to detect and initialize sensor 5!");
+    working[4] = 0;
   }
 
   if (!ble.begin(VERBOSE_MODE)) {
@@ -110,22 +117,22 @@ void setup() {
     !ble.sendCommandCheckOK(F( "+++" ))
   ) ;
 
-  vl53l0x.startContinuous(5); // ms delay between readings
-  vl53l0x_2.startContinuous(5); // ms delay between readings
-  vl53l0x_3.startContinuous(5); // ms delay between readings
-  vl53l0x_4.startContinuous(5); // ms delay between readings
-  vl53l0x_5.startContinuous(5); // ms delay between readings
+  if (working[0]) vl53l0x.startContinuous(5); // ms delay between readings
+  if (working[1]) vl53l0x_2.startContinuous(5); // ms delay between readings
+  if (working[2]) vl53l0x_3.startContinuous(5); // ms delay between readings
+  if (working[3]) vl53l0x_4.startContinuous(5); // ms delay between readings
+  if (working[4]) vl53l0x_5.startContinuous(5); // ms delay between readings
 
 }
 void loop() {
 
-  int distance = vl53l0x.readRangeContinuousMillimeters();
-  int distance_2 = vl53l0x_2.readRangeContinuousMillimeters();
-  int distance_3 = vl53l0x_3.readRangeContinuousMillimeters();
-  int distance_4 = vl53l0x_4.readRangeContinuousMillimeters();
-  int distance_5 = vl53l0x_5.readRangeContinuousMillimeters();
+  int distance = working[0]?vl53l0x.readRangeContinuousMillimeters():0;
+  int distance_2 = working[1]?vl53l0x_2.readRangeContinuousMillimeters():0;
+  int distance_3 = working[2]?vl53l0x_3.readRangeContinuousMillimeters():0;
+  int distance_4 = working[3]?vl53l0x_4.readRangeContinuousMillimeters():0;
+  int distance_5 = working[4]?vl53l0x_5.readRangeContinuousMillimeters():0;
 
-  {
+  if (working[0]) {
     // Store the reading in the array and update the index
     
     readings[index] = distance;
@@ -139,7 +146,7 @@ void loop() {
     runningAvg = (float)sum / NUM_READINGS;
   }
 
-  {
+  if (working[1]) {
     // Store the reading in the array and update the index
     readings_2[index] = distance_2;
     index = (index + 1) % NUM_READINGS;
@@ -152,7 +159,7 @@ void loop() {
     runningAvg_2 = (float)sum / NUM_READINGS;
   }
 
-  {
+  if (working[2]) {
     // Store the reading in the array and update the index
     readings_3[index] = distance_3;
     index = (index + 1) % NUM_READINGS;
@@ -165,7 +172,7 @@ void loop() {
     runningAvg_3 = (float)sum / NUM_READINGS;
   }
 
-  {
+  if (working[3]) {
     // Store the reading in the array and update the index
     readings_4[index] = distance_4;
     index = (index + 1) % NUM_READINGS;
@@ -178,7 +185,7 @@ void loop() {
     runningAvg_4 = (float)sum / NUM_READINGS;
   }
 
-  {
+  if (working[4]) {
     // Store the reading in the array and update the index
     readings_5[index] = distance_5;
     index = (index + 1) % NUM_READINGS;

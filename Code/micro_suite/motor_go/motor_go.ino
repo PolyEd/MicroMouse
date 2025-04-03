@@ -7,16 +7,19 @@ void setup() {
   pinMode(M1_BACKWARD, OUTPUT);
   pinMode(M2_FORWARD, OUTPUT);
   pinMode(M2_BACKWARD, OUTPUT);
+  pinMode(9, INPUT);
+  pinMode(10, INPUT);
+  // delay(500);
+  // Serial.begin(9600);
+  // analogWrite(M1_BACKWARD, 255);
 }
 void loop() {
-  analogWrite(M1_BACKWARD, 0);
-  //analogWrite(M2_BACKWARD, 0);
-  analogWrite(M1_FORWARD, 255);
-  //analogWrite(M2_FORWARD, 255);
-  delay(1000);
-  analogWrite(M1_FORWARD, 0);
-  //analogWrite(M2_FORWARD, 0);
-  analogWrite(M1_BACKWARD, 255);
-  //analogWrite(M2_BACKWARD, 255);
-  delay(1000);
+  analogWrite(M2_BACKWARD, 255);
+  analogWrite(M2_FORWARD,0);
+  delay(500);
+  // analogWrite(M2_BACKWARD, 50);
+analogWrite(M2_FORWARD, 255);
+  analogWrite(M2_BACKWARD,0);
+  delay(500);
+  // Serial.println(digitalRead(10));
 }

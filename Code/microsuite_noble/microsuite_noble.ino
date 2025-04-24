@@ -1,17 +1,17 @@
 #include <Wire.h>
 #include <VL53L0X.h>
 
-#define xshutpin_1 5
-#define xshutpin_2 6
-#define xshutpin_3 7
-#define xshutpin_4 8
+#define xshutpin_1 7
+#define xshutpin_2 8
+#define xshutpin_3 5
+#define xshutpin_4 6
 
 #define sensor1_newaddress 42
 #define sensor2_newaddress 43
 #define sensor3_newaddress 44
 #define sensor4_newaddress 45
 
-#define NUM_READINGS 2 // Number of readings to average
+#define NUM_READINGS 5 // Number of readings to average
 
 int working[5] = {1, 1, 1, 1, 1};
 
@@ -42,7 +42,7 @@ int index_5 = 0;               // Index to keep track of the current reading pos
 float runningAvg_5;
 
 void setup() {
-  
+
   Wire.begin();
 
   pinMode(xshutpin_1, OUTPUT);
@@ -114,10 +114,10 @@ void loop() {
 
   if (working[0]) {
     // Store the reading in the array and update the index
-    
+
     readings[index] = distance;
     index = (index + 1) % NUM_READINGS;
-  
+
     // Calculate the running average
     int sum = 0;
     for (int i = 0; i < NUM_READINGS; i++) {
@@ -129,8 +129,8 @@ void loop() {
   if (working[1]) {
     // Store the reading in the array and update the index
     readings_2[index] = distance_2;
-    index = (index + 1) % NUM_READINGS;
-    
+    index_2 = (index + 1) % NUM_READINGS;
+
     // Calculate the running average
     int sum = 0;
     for (int i = 0; i < NUM_READINGS; i++) {
@@ -142,8 +142,8 @@ void loop() {
   if (working[2]) {
     // Store the reading in the array and update the index
     readings_3[index] = distance_3;
-    index = (index + 1) % NUM_READINGS;
-    
+    index_3 = (index + 1) % NUM_READINGS;
+
     // Calculate the running average
     int sum = 0;
     for (int i = 0; i < NUM_READINGS; i++) {
@@ -155,8 +155,8 @@ void loop() {
   if (working[3]) {
     // Store the reading in the array and update the index
     readings_4[index] = distance_4;
-    index = (index + 1) % NUM_READINGS;
-    
+    index_4 = (index + 1) % NUM_READINGS;
+
     // Calculate the running average
     int sum = 0;
     for (int i = 0; i < NUM_READINGS; i++) {
@@ -168,8 +168,8 @@ void loop() {
   if (working[4]) {
     // Store the reading in the array and update the index
     readings_5[index] = distance_5;
-    index = (index + 1) % NUM_READINGS;
-    
+    index_5 = (index + 1) % NUM_READINGS;
+
     // Calculate the running average
     int sum = 0;
     for (int i = 0; i < NUM_READINGS; i++) {

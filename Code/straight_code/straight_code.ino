@@ -214,7 +214,7 @@ void loop() {
   ble.println(String(runningAvg) + "," + String(runningAvg_2) + "," + String(runningAvg_3) + "," + String(runningAvg_4) + "," + String(runningAvg_5));
 
   if (runningAvg_3 > 100 ) {
-    if ( (runningAvg_5 - runningAvg_2) > 40 ) {
+    if ( (runningAvg_5 - runningAvg_2) > 10 ) {
       delay(5);
       analogWrite(M1_BACKWARD, 0);
       analogWrite(M2_BACKWARD, 0);
@@ -222,7 +222,7 @@ void loop() {
       analogWrite(M2_FORWARD,  0);
       delay(10);
 
-    } else if ( (runningAvg_2 - runningAvg_5) > 40 ) {
+    } else if ( (runningAvg_2 - runningAvg_5) > 10 ) {
       delay(5);
       analogWrite(M1_BACKWARD, 0);
       analogWrite(M2_BACKWARD, 0);

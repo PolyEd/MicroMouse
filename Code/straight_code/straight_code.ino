@@ -1,5 +1,12 @@
 #include <Wire.h>
 #include <VL53L0X.h>
+#include <Adafruit_BLE.h>
+#include <Adafruit_BluefruitLE_SPI.h>
+
+#define BLUETOOTH_IRQ 7
+#define BLUETOOTH_SS 17
+#define BLUETOOTH_RST -1
+#define VERBOSE_MODE true
 
 #define xshutpin_1 5
 #define xshutpin_2 6
@@ -22,7 +29,7 @@ int index = 0;               // Index to keep track of the current reading posit
 float runningAvg;
 
 VL53L0X vl53l0x_2;
-int readings_2[NUM_READINGS];  // Arrato store the readings
+int readings_2[NUM_READINGS];  // Array to store the readings
 int index_2 = 0;               // Index to keep track of the current reading position
 float runningAvg_2;
 
@@ -47,8 +54,20 @@ float runningAvg_5;
 #define M2_FORWARD A3
 #define M2_BACKWARD 13
 
+Adafruit_BluefruitLE_SPI ble(BLUETOOTH_SS, BLUETOOTH_IRQ, BLUETOOTH_RST);
 
 void setup() {
+
+  if (!ble.begin(VERBOSE_MODE)) {
+    
+  }
+  ble.echo(false);
+  if (
+    !ble.sendCommandCheckOK(F( "AT+GAPDEVNAME=Bluefruit (SPI)" ))
+  ) ;
+  if (
+    !ble.sendCommandCheckOK(F( "+++" ))
+  ) ;
   
   Wire.begin();
 
@@ -142,8 +161,8 @@ void loop() {
 
   if (working[1]) {
     // Store the reading in the array and update the index
-    readings_2[index] = distance_2;
-    index_2 = (index + 1) % NUM_READINGS;
+    readings_2[index_2] = distance_2;
+    index_2 = (index_2 + 1) % NUM_READINGS;
     
     // Calculate the running average
     int sum = 0;
@@ -155,8 +174,8 @@ void loop() {
 
   if (working[2]) {
     // Store the reading in the array and update the index
-    readings_3[index] = distance_3;
-    index_3 = (index + 1) % NUM_READINGS;
+    readings_3[index_3] = distance_3;
+    index_3 = (index_3 + 1) % NUM_READINGS;
     
     // Calculate the running average
     int sum = 0;
@@ -168,8 +187,8 @@ void loop() {
 
   if (working[3]) {
     // Store the reading in the array and update the index
-    readings_4[index] = distance_4;
-    index_4 = (index + 1) % NUM_READINGS;
+    readings_4[index_4] = distance_4;
+    index_4 = (index_4 + 1) % NUM_READINGS;
     
     // Calculate the running average
     int sum = 0;
@@ -181,8 +200,8 @@ void loop() {
 
   if (working[4]) {
     // Store the reading in the array and update the index
-    readings_5[index] = distance_5;
-    index_5 = (index + 1) % NUM_READINGS;
+    readings_5[index_5] = distance_5;
+    index_5 = (index_5 + 1) % NUM_READINGS;
     
     // Calculate the running average
     int sum = 0;
@@ -192,10 +211,10 @@ void loop() {
     runningAvg_5 = (float)sum / NUM_READINGS;
   }
 
-  Serial.println(String(runningAvg) + "," + String(runningAvg_2) + "," + String(runningAvg_3) + "," + String(runningAvg_4) + "," + String(runningAvg_5));
+  ble.println(String(runningAvg) + "," + String(runningAvg_2) + "," + String(runningAvg_3) + "," + String(runningAvg_4) + "," + String(runningAvg_5));
 
   if (runningAvg_3 > 100 ) {
-    if ( (runningAvg_5 - runningAvg_2) < 40 ) {
+    if ( (runningAvg_5 - runningAvg_2) > 40 ) {
       delay(5);
       analogWrite(M1_BACKWARD, 0);
       analogWrite(M2_BACKWARD, 0);
@@ -203,7 +222,7 @@ void loop() {
       analogWrite(M2_FORWARD,  0);
       delay(10);
   
-    } else if ( (runningAvg_2 - runningAvg_5) < 40 ) {
+    } else if ( (runningAvg_2 - runningAvg_5) > 40 ) {
       delay(5);
       analogWrite(M1_BACKWARD, 0);
       analogWrite(M2_BACKWARD, 0);

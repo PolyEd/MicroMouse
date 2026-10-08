@@ -1,0 +1,5 @@
+# VL53L0X ctypes driver — needs gcc + python3-dev on the Pi to build
+git+https://github.com/pimoroni/vl53l0x-python.git
+smbus2
+pigpio
+bluezero

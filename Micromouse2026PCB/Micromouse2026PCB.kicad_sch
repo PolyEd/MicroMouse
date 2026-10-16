@@ -3382,20 +3382,52 @@
 		(uuid "e0151c02-6137-4b1b-bf48-0869bf479c1b")
 	)
 	(no_connect
+		(at 194.31 107.95)
+		(uuid "0fef0e24-43b5-4296-b063-df98d6a91e11")
+	)
+	(no_connect
+		(at 194.31 110.49)
+		(uuid "11386ed7-60c2-43db-8bc6-39dc7339cfa4")
+	)
+	(no_connect
 		(at 106.68 45.72)
 		(uuid "2d565e44-b75d-465d-a4dd-97b4a31d7a63")
+	)
+	(no_connect
+		(at 194.31 100.33)
+		(uuid "366d493a-f43c-4430-8587-3ed9590351ce")
+	)
+	(no_connect
+		(at 194.31 95.25)
+		(uuid "3c2289a1-4619-4c4f-94f2-fe1c8d47ae69")
 	)
 	(no_connect
 		(at 82.55 81.28)
 		(uuid "53564517-d1b0-41e5-ba22-7c0e6aa201d0")
 	)
 	(no_connect
+		(at 194.31 90.17)
+		(uuid "578655b2-bcb9-493d-b8e6-8dfa134ebf1d")
+	)
+	(no_connect
+		(at 143.51 97.79)
+		(uuid "5b1667c5-c9aa-4095-bd2f-92d220860ab8")
+	)
+	(no_connect
 		(at 67.31 78.74)
 		(uuid "682f6f39-6dca-461b-bdb9-d036ee2b4b1a")
 	)
 	(no_connect
+		(at 194.31 97.79)
+		(uuid "6d86d924-4962-48ec-bec5-bcc9831804eb")
+	)
+	(no_connect
 		(at 52.07 78.74)
 		(uuid "81a7792b-091a-4d32-9907-76013a2b12bb")
+	)
+	(no_connect
+		(at 194.31 87.63)
+		(uuid "8b5306b5-176f-4f4a-8c16-bd5e7d4d3048")
 	)
 	(no_connect
 		(at 106.68 55.88)
@@ -3410,6 +3442,14 @@
 		(uuid "c0096125-bb9a-45c3-a8c7-9e39b37c27bd")
 	)
 	(no_connect
+		(at 194.31 102.87)
+		(uuid "c7e10754-f1a6-487d-8a80-657c288855ec")
+	)
+	(no_connect
+		(at 194.31 85.09)
+		(uuid "e4b69523-be71-44dc-be8f-ce17ee549030")
+	)
+	(no_connect
 		(at 82.55 78.74)
 		(uuid "e919a8cd-0684-4a82-88b6-8d6ff148e9b0")
 	)
@@ -3422,6 +3462,26 @@
 			(type default)
 		)
 		(uuid "02d4c0fa-435a-436f-a768-6265f419c7ab")
+	)
+	(wire
+		(pts
+			(xy 231.14 67.31) (xy 231.14 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05116f5c-f5f0-4c8e-9311-d6ca7f94e3e1")
+	)
+	(wire
+		(pts
+			(xy 215.9 67.31) (xy 209.55 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0576225b-447e-4226-9dec-e97cccaff7c2")
 	)
 	(wire
 		(pts
@@ -3442,6 +3502,16 @@
 			(type default)
 		)
 		(uuid "0c734deb-dcf2-4944-ac0a-62e912184834")
+	)
+	(wire
+		(pts
+			(xy 212.09 72.39) (xy 212.09 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ea06012-cffa-4aff-a142-fb024d066d7a")
 	)
 	(wire
 		(pts
@@ -3535,6 +3605,26 @@
 	)
 	(wire
 		(pts
+			(xy 215.9 72.39) (xy 212.09 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "41f18c61-603f-49cf-a0b4-83028e50947f")
+	)
+	(wire
+		(pts
+			(xy 231.14 63.5) (xy 194.31 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "474c4c55-9472-4924-b190-1ac5bfa38c2c")
+	)
+	(wire
+		(pts
 			(xy 138.43 85.09) (xy 138.43 175.26)
 		)
 		(stroke
@@ -3592,6 +3682,16 @@
 			(type default)
 		)
 		(uuid "5b5331ae-0df7-4f2e-a386-d70561a97837")
+	)
+	(wire
+		(pts
+			(xy 212.09 77.47) (xy 194.31 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5f306b2e-be1d-4704-bd3b-2c4878dd674f")
 	)
 	(wire
 		(pts
@@ -3665,6 +3765,16 @@
 	)
 	(wire
 		(pts
+			(xy 194.31 63.5) (xy 194.31 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76505b89-a80f-44d3-9531-f4d6ad9fbfa1")
+	)
+	(wire
+		(pts
 			(xy 194.31 72.39) (xy 201.93 72.39)
 		)
 		(stroke
@@ -3695,6 +3805,16 @@
 	)
 	(wire
 		(pts
+			(xy 209.55 67.31) (xy 209.55 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8737f188-c961-4572-ac55-cde12f7c9c8c")
+	)
+	(wire
+		(pts
 			(xy 143.51 69.85) (xy 135.89 69.85)
 		)
 		(stroke
@@ -3702,6 +3822,16 @@
 			(type default)
 		)
 		(uuid "893954cd-3e4f-4c1a-a981-995526c3445a")
+	)
+	(wire
+		(pts
+			(xy 194.31 74.93) (xy 209.55 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "898df638-1355-4ed6-ab02-b8ad19bb549c")
 	)
 	(wire
 		(pts
@@ -4605,7 +4735,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Rotary_Encoder:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm"
 			(at 219.71 65.786 0)
 			(hide yes)
 			(show_name no)
@@ -5077,6 +5207,84 @@
 			(project "Micromouse2026PCB"
 				(path "/1fd78b34-423c-4a84-bbf0-b5da61c34f32"
 					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 63.5 102.87 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "439e94a6-32cb-4fd2-bf1d-f095bc428641")
+		(property "Reference" "#FLG03"
+			(at 63.5 100.965 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 63.5 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 63.5 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 63.5 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 63.5 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2b744ed4-0d9b-4a40-9879-e0ed5c0a7ae3")
+		)
+		(instances
+			(project "Micromouse2026PCB"
+				(path "/1fd78b34-423c-4a84-bbf0-b5da61c34f32"
+					(reference "#FLG03")
 					(unit 1)
 				)
 			)
@@ -7058,6 +7266,85 @@
 			(project "Micromouse2026PCB"
 				(path "/1fd78b34-423c-4a84-bbf0-b5da61c34f32"
 					(reference "#PWR030")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 231.14 72.39 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d0cda40a-af37-4631-a3c1-21c3d0c1b506")
+		(property "Reference" "#PWR032"
+			(at 237.49 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 234.95 72.3899 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 231.14 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 231.14 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 231.14 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a339c232-ada4-41e3-914e-fd28f5073c4a")
+		)
+		(instances
+			(project "Micromouse2026PCB"
+				(path "/1fd78b34-423c-4a84-bbf0-b5da61c34f32"
+					(reference "#PWR032")
 					(unit 1)
 				)
 			)

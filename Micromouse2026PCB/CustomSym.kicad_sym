@@ -232,8 +232,21 @@
 				)
 			)
 		)
+		(symbol "L9110H_0_1"
+			(rectangle
+				(start -5.08 3.81)
+				(end 5.08 -6.35)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
 		(symbol "L9110H_1_1"
-			(pin input line
+			(pin output line
 				(at -7.62 2.54 0)
 				(length 2.54)
 				(name "OA"
@@ -287,7 +300,7 @@
 					)
 				)
 			)
-			(pin input line
+			(pin output line
 				(at -7.62 -5.08 0)
 				(length 2.54)
 				(name "OB"

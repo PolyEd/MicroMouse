@@ -28,7 +28,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_JST:JST_ZH_B6B-ZR_1x06_P1.50mm_Vertical"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -233,7 +233,7 @@
 			)
 		)
 		(symbol "L9110H_1_1"
-			(pin input line
+			(pin output line
 				(at -7.62 2.54 0)
 				(length 2.54)
 				(name "OA"
@@ -287,7 +287,7 @@
 					)
 				)
 			)
-			(pin input line
+			(pin output line
 				(at -7.62 -5.08 0)
 				(length 2.54)
 				(name "OB"

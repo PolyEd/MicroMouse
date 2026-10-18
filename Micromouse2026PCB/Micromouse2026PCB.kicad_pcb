@@ -6220,6 +6220,18 @@
 		(layer "Edge.Cuts")
 		(uuid "7bf96851-b27e-49da-9de0-4d363437c8fc")
 	)
+	(gr_text "GND V+"
+		(at 95.25 67.31 0)
+		(layer "F.SilkS")
+		(uuid "c2aa3d2f-400a-4023-affa-abc87a462fdd")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.4)
+			)
+			(justify left bottom)
+		)
+	)
 	(segment
 		(start 36.8555 70.9276)
 		(end 36.0655 70.8467)

@@ -513,7 +513,7 @@
         "wire_width": 6
       },
       {
-        "clearance": 0.2,
+        "clearance": 0.25,
         "diff_pair_gap": 0.25,
         "diff_pair_width": 0.2,
         "microvia_diameter": 0.3,
@@ -549,6 +549,22 @@
       {
         "netclass": "Power",
         "pattern": "Net-(SW1-Pin_1)"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "Net-(M1-MA)"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "Net-(M1-MB)"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "Net-(M2-MA)"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "Net-(M2-MB)"
       }
     ]
   },

@@ -121,9 +121,9 @@
 			(subtractmaskfromsilk no)
 			(outputformat 1)
 			(mirror no)
-			(drillshape 1)
+			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "")
+			(outputdirectory "/Users/c28ba/Desktop/micro output/")
 		)
 	)
 	(footprint "Connector_JST:JST_ZH_B6B-ZR_1x06_P1.50mm_Vertical"
@@ -1041,7 +1041,7 @@
 		(property "Reference" "RS1"
 			(at 2.8 -4.7 0)
 			(layer "F.SilkS")
-			(uuid "513879e9-51cb-4150-89eb-4b2fc579a999")
+			(uuid "233d9389-d9b0-4bbc-9752-04c82782ccb8")
 			(effects
 				(font
 					(size 1 1)
@@ -1052,7 +1052,7 @@
 		(property "Value" "RotaryEncoder_Switch"
 			(at 7.5 10.4 0)
 			(layer "F.Fab")
-			(uuid "36cd1819-6caf-4417-b33b-d0ff03239786")
+			(uuid "350f238f-1976-4339-8976-22f8e69ad220")
 			(effects
 				(font
 					(size 1 1)
@@ -1065,7 +1065,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "46be7e0b-6413-429e-8b91-9fd17cf91b30")
+			(uuid "6f093a0c-4e6a-4280-b747-542dcaf935d8")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1078,7 +1078,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "9bd996e6-17bb-4362-a7ab-cfff05186f29")
+			(uuid "cd29b449-3194-495c-bdf8-a48c7594e2aa")
 			(effects
 				(font
 					(size 1.27 1.27)

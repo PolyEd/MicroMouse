@@ -37,7 +37,7 @@
 //  BOTH driver pins must be PWM pins. Arduino Micro PWM pins: 3, 5, 6, 9,
 //  10, 11, 13 (pin 4 is NOT PWM on the Micro!).
 // ----------------------------------------------------------------------------
-EncoderMotor motor(6, 5, 2, 3, 3.0, 29.977);
+EncoderMotor motor(6, 5, 2, 3, 3.0, 30.367);
 
 // Optional 7th argument: quadrature multiplier (default 4).
 // Use 1 only if your PPR number is already given in "counts".
@@ -108,11 +108,29 @@ void loop() {
   // Checked EVERY loop (not inside the print block) so the next move starts
   // the moment the previous one finishes. Delete this block when testing
   // one of the other commands above.
-  if (motor.isDone() && !motor.isStalled()) {
-    motor.moveTo(dir * 180, 150);
-    dir = -dir;
-  }
+  const float SWING = 360;                // degrees each side; try 360 and 1800
+  static unsigned long doneAt = 0;
+  static float moveDir = 1, overshoot = 0;
 
+  float past = (motor.getAngle() - motor.getTargetAngle()) * moveDir;
+  if (past > overshoot) overshoot = past; // furthest it went beyond the target
+
+  if (motor.isDone() && !motor.isStalled()) {
+    if (doneAt == 0) {
+      doneAt = millis();
+    } else if (millis() - doneAt > 3000) {
+      Serial.print("target:");     Serial.print(motor.getTargetAngle(), 1);
+      Serial.print(" settled:");   Serial.print(motor.getAngle(), 1);
+      Serial.print(" overshoot:"); Serial.println(overshoot, 1);
+
+      float next = dir * SWING;
+      moveDir   = (next > motor.getAngle()) ? 1 : -1;
+      overshoot = 0;
+      motor.moveTo(next, 150);
+      dir = -dir;
+      doneAt = 0;
+    }
+  }
   // Print status 10x per second (works in Serial Monitor and Serial Plotter)
   static unsigned long lastPrint = 0;
   if (millis() - lastPrint >= 100) {

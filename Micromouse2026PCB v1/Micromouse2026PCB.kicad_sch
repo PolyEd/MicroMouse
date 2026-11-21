@@ -3768,12 +3768,6 @@
 		(uuid "2787e4a5-160a-4e6c-aa1f-79cd153130b5")
 	)
 	(junction
-		(at 88.9 144.78)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2c2a2e8a-f2f5-467b-a39f-ab22eb9ef56f")
-	)
-	(junction
 		(at 147.32 134.62)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3802,12 +3796,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5e97c3d6-b8bc-45a7-b0ef-12b98ab1ffd1")
-	)
-	(junction
-		(at 88.9 101.6)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "83429918-2d12-4ee1-870b-547a3dd864c5")
 	)
 	(junction
 		(at 105.41 123.19)
@@ -4017,16 +4005,6 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 161.29) (xy 96.52 161.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2022c791-188a-424f-92d8-d359d7f8ee35")
-	)
-	(wire
-		(pts
 			(xy 105.41 101.6) (xy 105.41 97.79)
 		)
 		(stroke
@@ -4207,16 +4185,6 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 144.78) (xy 96.52 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "55b814a6-c803-47ed-a7e8-df862f852ff7")
-	)
-	(wire
-		(pts
 			(xy 107.95 104.14) (xy 91.44 104.14)
 		)
 		(stroke
@@ -4357,7 +4325,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 101.6) (xy 88.9 101.6)
+			(xy 60.96 101.6) (xy 105.41 101.6)
 		)
 		(stroke
 			(width 0)
@@ -4577,16 +4545,6 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 101.6) (xy 88.9 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b89d933f-8999-4221-bb67-76aa7c76d5f3")
-	)
-	(wire
-		(pts
 			(xy 60.96 80.01) (xy 69.85 80.01)
 		)
 		(stroke
@@ -4767,16 +4725,6 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 144.78) (xy 88.9 161.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f0eb9942-099b-4452-8531-74c2f8b02084")
-	)
-	(wire
-		(pts
 			(xy 215.9 72.39) (xy 215.9 80.01)
 		)
 		(stroke
@@ -4824,16 +4772,6 @@
 			(type default)
 		)
 		(uuid "f89ff900-4de0-4a1f-bcd3-3c97489d992e")
-	)
-	(wire
-		(pts
-			(xy 88.9 101.6) (xy 105.41 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fc645ebe-5da2-47eb-af04-ed445a1957d0")
 	)
 	(label "SCL"
 		(at 43.18 50.8 180)
@@ -5148,6 +5086,85 @@
 			(project "Micromouse2026PCB"
 				(path "/1fd78b34-423c-4a84-bbf0-b5da61c34f32"
 					(reference "#PWR028")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 96.52 161.29 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "18e68fdf-b513-493b-9754-75879f7114df")
+		(property "Reference" "#PWR044"
+			(at 100.33 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 92.71 161.2899 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 96.52 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 96.52 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f699ce30-caf3-4176-ae54-973841181f12")
+		)
+		(instances
+			(project "Micromouse2026PCB"
+				(path "/1fd78b34-423c-4a84-bbf0-b5da61c34f32"
+					(reference "#PWR044")
 					(unit 1)
 				)
 			)
@@ -7065,6 +7082,85 @@
 			(project "Micromouse2026PCB"
 				(path "/1fd78b34-423c-4a84-bbf0-b5da61c34f32"
 					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 96.52 144.78 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7bcdfc8d-e9c2-45e6-9bfb-cdb706c426db")
+		(property "Reference" "#PWR043"
+			(at 100.33 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 92.71 144.7799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 96.52 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 96.52 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "39994242-9f7f-48e4-9c49-a455995a50f9")
+		)
+		(instances
+			(project "Micromouse2026PCB"
+				(path "/1fd78b34-423c-4a84-bbf0-b5da61c34f32"
+					(reference "#PWR043")
 					(unit 1)
 				)
 			)
